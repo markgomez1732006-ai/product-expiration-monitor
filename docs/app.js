@@ -4,6 +4,7 @@ const searchInput = document.getElementById("search-input");
 const statusFilter = document.getElementById("status-filter");
 const submitButton = form.querySelector('button[type="submit"]');
 
+
 let products = [];
 let editingProductId = null;
 

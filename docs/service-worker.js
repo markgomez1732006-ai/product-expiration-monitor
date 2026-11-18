@@ -1,4 +1,4 @@
-const CACHE_NAME = "product-expiration-monitor-v1";
+const CACHE_NAME = "product-expiration-monitor-v2";
 
 const APP_FILES = [
     "./index.html",
