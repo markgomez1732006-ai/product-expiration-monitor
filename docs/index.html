@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#287b58">
+    <link rel="manifest" href="manifest.json">
+    title>Product Expiration Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <p class="eyebrow">INVENTORY</p>
+            <h1>Expiration Monitor</h1>
+            <p>Keep track of products and their expiry dates.</p>
+        </header>
+
+        <section class="summary">
+            <article class="summary-card">
+                <h2>Total products</h2>
+                <p id="total-count">0</p>
+            </article>
+
+            <article class="summary-card">
+                <h2>Expired</h2>
+                <p id="expired-count">0</p>
+            </article>
+
+            <article class="summary-card">
+                <h2>Expiring soon</h2>
+                <p id="soon-count">0</p>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>Add a product</h2>
+
+            <form id="product-form">
+                <label>
+                    Product name
+                    <input id="product-name" type="text" required>
+                </label>
+
+                <label>
+                    Category
+                    <input id="product-category" type="text" required>
+                </label>
+
+                <label>
+                    Quantity
+                    <input id="product-quantity" type="number" min="0" required>
+                </label>
+
+                <label>
+                    Expiry date
+                    <input id="product-expiry" type="date" required>
+                </label>
+
+                <button type="submit">Add product</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Products</h2>
+
+            <div class="product-controls">
+                <input
+                    id="search-input"
+                    type="search"
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+
+                <select id="status-filter" aria-label="Filter by status">
+                    <option value="all">All statuses</option>
+                    <option value="expired">Expired</option>
+                    <option value="soon">Expiring soon</option>
+                    <option value="fresh">Fresh</option>
+                </select>
+            </div>
+
+            <div id="product-list"></div>
+        </section>
+    </main>
+</body>
+</html>
